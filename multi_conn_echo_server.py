@@ -34,7 +34,7 @@ def run_server():
                 if data == b'bye\r\n':
                     print(f"connection with {client_addr} closed")
                     conn.close()
-                    connections.remove((conn, addr))
+                    connections.remove((conn, client_addr))
 
     except KeyboardInterrupt:
             s.close()
